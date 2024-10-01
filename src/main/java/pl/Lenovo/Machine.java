@@ -3,6 +3,7 @@ package pl.Lenovo;
 import java.util.List;
 
 public class Machine {
+
     private String name;
     private List<Elements> elements;
 
@@ -15,20 +16,19 @@ public class Machine {
 
     @Override
     public String toString() {
-        StringBuilder elementsStr = new StringBuilder();
+        StringBuilder elementsNames = new StringBuilder();
         for (Elements element : elements) {
-            elementsStr.append(element.toString()).append("\n");
+            elementsNames.append(element.getName()).append(", ");
+        }
+
+        if (elementsNames.length() > 0) {
+            elementsNames.setLength(elementsNames.length() - 2);
         }
         return "Machine{" +
                 "name='" + name + '\'' +
-                ", elements=" + elementsStr +
+                ", elements=" + elementsNames +
                 '}';
     }
-//        return "Machine{" +
-//                "name='" + name + '\'' +
-//                ", elements=" + elements +
-//                '}';
-//    }
 
     public String getName() {
         return name;

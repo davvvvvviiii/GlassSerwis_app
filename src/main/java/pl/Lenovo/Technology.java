@@ -1,6 +1,7 @@
 package pl.Lenovo;
 
 public abstract class Technology {
+
     private boolean ready;
 
     public Technology(boolean ready) {

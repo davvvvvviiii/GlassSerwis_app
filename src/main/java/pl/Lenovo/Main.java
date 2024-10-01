@@ -6,9 +6,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        System.out.println("Hello world!");
+
         Machine machine = new Machine();
-        Elements element = new Elements("koło","355",4, Collections.emptyList() ,false);
+        Elements element = new Elements("koło","355",4, null ,false);
 
         machine.setName("wiertarka");
         List<Elements> elementsList = new ArrayList<>();

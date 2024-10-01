@@ -46,9 +46,6 @@ public class Elements {
         return technology;
     }
 
-//    public void setTechnology(String[] technology) {
-//        this.technology = technology;
-//    }
     @Override
     public String toString() {
         return "Element{" +

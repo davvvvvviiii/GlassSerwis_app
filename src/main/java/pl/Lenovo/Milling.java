@@ -1,6 +1,7 @@
 package pl.Lenovo;
 
 public class Milling extends Technology{
+
     public Milling(boolean ready) {
         super(ready);
     }
