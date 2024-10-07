@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Machine {
 
-    private String name;
-    private List<Elements> elements;
+    public String name;
+    public List<Elements> elements;
 
     public Machine(String name, List<Elements> elements) {
         this.name = name;
