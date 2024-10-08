@@ -48,17 +48,37 @@ public class Metods {
         String Material = scanner.nextLine();
         System.out.println("Quantity ");
         int quantity = scanner.nextInt();
+
+        scanner.nextLine();
         System.out.println("Choose a technology: ");
         List<Technology> technologies = getAvailableTechnologies();
         for (int i = 0; i < technologies.size(); i++){
             System.out.println((i+1)+" " + technologies.get(i).getClass().getSimpleName());
         }
         List<Technology> selectedTechnologies = new ArrayList<>();
-        System.out.println("");
+        System.out.println("Enter the technology numbers separated by a comma");
+        String[] chosenTechnologyIndices = scanner.nextLine().split(",");
+
+        for (String index : chosenTechnologyIndices) {
+            int technologyIndex = Integer.parseInt(index.trim()) - 1;
+            if (technologyIndex >= 0 && technologyIndex < technologies.size()) {
+                selectedTechnologies.add(technologies.get(technologyIndex));
+            }
+        }
+
+        Elements elements = new Elements(name, Material, quantity, selectedTechnologies, false);
 
         System.out.println("Choose a machine:");
         showAllMachines(machineList);
 
+        int machineNumber = scanner.nextInt();
+        for (int i = 0; i<machineList.size(); i++){
+            if (i==machineNumber){
+                Machine machine = machineList.get(i);
+                machine.setElements((List<Elements>) elements);
+                System.out.println(machine.toString());
+            }
+        }
     }
     public static List<Technology> getAvailableTechnologies() {
         List<Technology> technologies = new ArrayList<>();

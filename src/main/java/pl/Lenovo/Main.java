@@ -11,7 +11,7 @@ public class Main {
         List<Machine> machineList = new ArrayList<>();
 
         Machine machine = new Machine();
-        Elements element = new Elements("koło","355",4, null ,false);
+        Elements element = new Elements("koło", "355", 4, null, false);
 
         machine.setName("wiertarka");
         List<Elements> elementsList = new ArrayList<>();
@@ -29,18 +29,25 @@ public class Main {
         System.out.println("2 Create a new element");
         System.out.println("3 Show all machines");
         System.out.println("4 Show all elements");
+        System.out.println("5 Exit");
 
         int option = scanner.nextInt();
+        boolean running = true;
+        while(running) {
+            switch (option) {
+                case 1:
+                    Metods.createNewMachine(machineList);
+                    break;
+                case 2:
+                    Metods.createNewElement(machineList);
+                case 3:
+                    Metods.showAllMachines(machineList);
+                case 4:
 
-        switch (option){
-            case 1:
-               Metods.createNewMachine(machineList);
-                break;
-            case 2:
-
-            case 3:
-                Metods.showAllMachines(machineList);
-
+                case 5:
+                    running = false;
+                    break;
+            }
         }
     }
 }
