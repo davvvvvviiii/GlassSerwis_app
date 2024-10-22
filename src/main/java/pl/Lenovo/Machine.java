@@ -1,9 +1,16 @@
 package pl.Lenovo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.List;
 
+@Entity
 public class Machine {
 
+    @Id
+    @GeneratedValue
+    private int id;
     public String name;
     public List<Elements> elements;
 

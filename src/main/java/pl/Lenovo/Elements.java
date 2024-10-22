@@ -1,8 +1,16 @@
 package pl.Lenovo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.List;
 
+@Entity
 public class Elements {
+
+    @Id
+    @GeneratedValue
+    private int id;
     private String name;
     private String material;
     private int quantity;
