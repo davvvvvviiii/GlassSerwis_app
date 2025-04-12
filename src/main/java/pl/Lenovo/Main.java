@@ -1,7 +1,6 @@
 package pl.Lenovo;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -36,12 +35,12 @@ public class Main {
         while(running) {
             switch (option) {
                 case 1:
-                    Metods.createNewMachine(machineList);
+                    Methods.createNewMachine(machineList);
                     break;
                 case 2:
-                    Metods.createNewElement(machineList);
+                    Methods.createNewElement(machineList);
                 case 3:
-                    Metods.showAllMachines(machineList);
+                    Methods.showAllMachines(machineList);
                 case 4:
 
                 case 5:
