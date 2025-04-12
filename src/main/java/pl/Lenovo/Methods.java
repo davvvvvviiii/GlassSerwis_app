@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Metods {
+public class Methods {
     public static void createNewMachine(List<Machine> machineList) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the name of the new machine:");
@@ -33,12 +33,11 @@ public class Metods {
         return false;
     }
     public static void showAllMachines(List<Machine> machineList) {
-        System.out.println("Machines:");
+        System.out.println("Machines: ");
         for (Machine machine : machineList) {
             System.out.println("1 "+machine.getName());
         }
     }
-
     public static void createNewElement(List<Machine> machineList){
         Scanner scanner = new Scanner(System.in);
 
@@ -85,5 +84,11 @@ public class Metods {
         technologies.add(new Cutting(false));
         technologies.add(new Milling(false));
         return technologies;
+    }
+    public static void showAllElements(List<Elements> elementsList){
+        System.out.println("Elements: ");
+        for (Elements element : elementsList){
+            System.out.println(element.getName());
+        }
     }
 }
